@@ -48,6 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
+        android:alpha="0.8"
         android:clickable="true"
         android:contentDescription="butt"
         app:backgroundTint="@color/orange"
@@ -61,6 +62,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
+        android:alpha="0.8"
         android:clickable="true"
         android:contentDescription="addPh"
         app:backgroundTint="@color/orange"
@@ -81,37 +83,40 @@
         app:layout_constraintVertical_bias="0.0"
         tools:visibility="visible">
 
-        <ImageButton
-            android:id="@+id/buttEdit"
-            android:layout_width="64dp"
-            android:layout_height="60dp"
-            android:backgroundTint="@color/orange"
-            android:contentDescription="butt"
-            android:src="@drawable/edit"
-            app:layout_constraintEnd_toEndOf="@+id/imageView"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageButton
-            android:id="@+id/buttDel"
-            android:layout_width="64dp"
-            android:layout_height="60dp"
-            android:backgroundTint="@color/orange"
-            android:contentDescription="del"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView"
-            app:layout_constraintEnd_toEndOf="@+id/imageView"
-            app:srcCompat="@drawable/imagedelete" />
-
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/ImageUser"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:scaleType="centerCrop"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:srcCompat="@tools:sample/avatars" />
+
+        <ImageButton
+            android:id="@+id/buttEdit"
+            android:layout_width="64dp"
+            android:layout_height="60dp"
+            android:alpha="0.7"
+            android:backgroundTint="@color/orange"
+            android:contentDescription="butt"
+            android:src="@drawable/edit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/buttDel"
+            android:layout_width="64dp"
+            android:layout_height="60dp"
+            android:alpha="0.7"
+            android:backgroundTint="@color/orange"
+            android:contentDescription="del"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/imagedelete" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

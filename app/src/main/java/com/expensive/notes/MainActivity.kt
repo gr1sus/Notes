@@ -15,7 +15,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
     val myDbManager = MyDBManager(this)
-    val myAdapter = Adapter(ArrayList())
+    val myAdapter = Adapter(ArrayList(), this)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -50,6 +50,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun fillAdapter(){
-        myAdapter.updateAdapter(myDbManager.readDbData())
+        val tvEmpty = findViewById<TextView>(R.id.tvempty)
+        val list = myDbManager.readDbData()
+        myAdapter.updateAdapter(list)
+        if(list.size>0){
+            tvEmpty.visibility = View.GONE
+        }
+        else {
+            tvEmpty.visibility = View.VISIBLE
+        }
     }
 }
